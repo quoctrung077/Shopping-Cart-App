@@ -1,0 +1,29 @@
+.custom-app-bar {
+  margin-top: 72px;
+  margin-bottom: 29px;
+  position: relative;
+  @media (max-width: 800px) {
+    margin: 20px 0;
+  }
+
+  .header-items-logo__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media (max-width: 800px) {
+      justify-content: center;
+    }
+  }
+  .item {
+    color: #222222;
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+}
