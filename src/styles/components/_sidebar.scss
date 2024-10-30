@@ -1,0 +1,32 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: clamp(150px, 20vw, 250px);
+  max-width: 100%;
+  .filters--option {
+    display: flex;
+    justify-content: space-between;
+    min-height: 43px;
+    cursor: pointer;
+    border-bottom: 1px solid #231f201a;
+    &:hover {
+      background-color: hsl(0, 0%, 90%);
+      border-radius: 8px;
+    }
+  }
+}
+
+.card__container {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__content {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
