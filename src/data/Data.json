@@ -8,7 +8,7 @@
       "isOnSale": true,
       "originalPrice": 499.99,
       "discountedPrice": 399.99,
-      "image": "public/images/iphone-16-pro-max.png"
+      "image": "/images/iphone-16-pro-max.png"
     }
   },
   {
@@ -19,8 +19,8 @@
       "color": ["Black", "White", "Titan"],
       "isOnSale": false,
       "originalPrice": 499.99,
-      "discountedPrice":"",
-      "image": "public/images/iphone-16-pro-max.png"
+      "discountedPrice": "",
+      "image": "/images/iphone-16-pro-max.png"
     }
   },
   {
@@ -29,10 +29,10 @@
       "name": "iPhone 16",
       "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
       "color": ["Black", "White", "Titan"],
-      "isOnSale": true,
+      "isOnSale": false,
       "originalPrice": 499.99,
       "discountedPrice": 399.99,
-      "image": "public/images/iphone-16-pro-max.png"
+      "image": "/images/iphone-16-pro-max.png"
     }
   },
   {
@@ -41,10 +41,10 @@
       "name": "iPhone 16",
       "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
       "color": ["Black", "White", "Titan"],
-      "isOnSale": true,
+      "isOnSale": false,
       "originalPrice": 499.99,
       "discountedPrice": 399.99,
-      "image": "public/images/iphone-16-pro-max.png"
+      "image": "/images/iphone-16-pro-max.png"
     }
   },
   {
@@ -53,10 +53,10 @@
       "name": "iPhone 16",
       "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
       "color": ["Black", "White", "Titan"],
-      "isOnSale": true,
+      "isOnSale": false,
       "originalPrice": 499.99,
       "discountedPrice": 399.99,
-      "image": "public/images/iphone-16-pro-max.png"
+      "image": "/images/iphone-16-pro-max.png"
     }
   },
   {
@@ -65,10 +65,10 @@
       "name": "iPhone 16",
       "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
       "color": ["Black", "White", "Titan"],
-      "isOnSale": true,
+      "isOnSale": false,
       "originalPrice": 499.99,
       "discountedPrice": 399.99,
-      "image": "public/images/iphone-16-pro-max.png"
+      "image": "/images/iphone-16-pro-max.png"
     }
   },
   {
@@ -77,10 +77,10 @@
       "name": "iPhone 16",
       "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
       "color": ["Black", "White", "Titan"],
-      "isOnSale": true,
+      "isOnSale": false,
       "originalPrice": 499.99,
       "discountedPrice": 399.99,
-      "image": "public/images/iphone-16-pro-max.png"
+      "image": "/images/iphone-16-pro-max.png"
     }
   },
   {
@@ -92,7 +92,7 @@
       "isOnSale": true,
       "originalPrice": 499.99,
       "discountedPrice": 399.99,
-      "image": "public/images/iphone-16-pro-max.png"
+      "image": "/images/iphone-16-pro-max.png"
     }
   },
   {
@@ -104,7 +104,7 @@
       "isOnSale": true,
       "originalPrice": 499.99,
       "discountedPrice": 399.99,
-      "image": "public/images/iphone-16-pro-max.png"
+      "image": "/images/iphone-16-pro-max.png"
     }
   },
   {
@@ -116,7 +116,7 @@
       "isOnSale": true,
       "originalPrice": 499.99,
       "discountedPrice": 399.99,
-      "image": "public/images/smart-tivi-samsung-4k.png"
+      "image": "/images/smart-tivi-samsung-4k.png"
     }
   }
 ]

@@ -12,6 +12,7 @@ import {
   CardActions,
   Pagination,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import data from "../data/Data.json";
 
 const ProductCatalog = () => {
@@ -144,87 +145,92 @@ const ProductCatalog = () => {
           </Box>
 
           {/* Lưới Sản Phẩm */}
-          <Grid container spacing={2}>
-            {currentDataList.map((e) => (
-              <Grid
-                sx={{
-                  gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-                }}
-                item
-                xs={12}
-                sm={6}
-                md={4}
-                key={e.product.id}
-              >
-                <Card
+          <Link to="/product-detail/  ">
+            <Grid container spacing={2}>
+              {currentDataList.map((e) => (
+                <Grid
                   sx={{
-                    position: "relative",
-                    overflow: "hidden",
-                    cursor: "pointer",
-                    "&:hover .image-box": {
-                      transform: "translateY(-10px)",
-                      transition: "transform 0.3s ease",
-                    },
+                    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
                   }}
+                  item
+                  xs={12}
+                  sm={6}
+                  md={4}
+                  key={e.product.id}
+                  component={Link}
+                  to={`/product-detail/${e.product.id}`}
                 >
-                  {e.product.isOnSale && (
-                    <Box
-                      sx={{
-                        position: "absolute",
-                        right: 0,
-                        backgroundColor: "#E2342D",
-                        color: "white",
-                        padding: "6px 36.68px",
-                      }}
-                    >
-                      {calculateDiscountPercentage(
-                        e.product.originalPrice,
-                        e.product.discountedPrice
-                      )}
-                      % OFF
-                    </Box>
-                  )}
-                  <Box className="card__container">
-                    <Box
-                      className="image-box"
-                      sx={{
-                        margin: "81px 0",
-                        maxWidth: "280px",
-                        maxHeight: "280px",
+                  <Card
+                    sx={{
+                      position: "relative",
+                      overflow: "hidden",
+                      cursor: "pointer",
+                      "&:hover .image-box": {
+                        transform: "translateY(-10px)",
                         transition: "transform 0.3s ease",
-                      }}
-                    >
-                      <CardMedia
-                        component="img"
-                        image={e.product.image}
-                        alt={e.product.name}
-                      />
+                      },
+                    }}
+                  >
+                    {e.product.isOnSale && (
+                      <Box
+                        sx={{
+                          position: "absolute",
+                          right: 0,
+                          backgroundColor: "#E2342D",
+                          color: "white",
+                          padding: "6px 36.68px",
+                        }}
+                      >
+                        {calculateDiscountPercentage(
+                          e.product.originalPrice,
+                          e.product.discountedPrice
+                        )}
+                        % OFF
+                      </Box>
+                    )}
+                    <Box className="card__container">
+                      <Box
+                        className="image-box"
+                        sx={{
+                          margin: "81px 0",
+                          maxWidth: "280px",
+                          maxHeight: "280px",
+                          transition: "transform 0.3s ease",
+                        }}
+                      >
+                        <CardMedia
+                          component="img"
+                          image={e.product.image}
+                          alt={e.product.name}
+                        />
+                      </Box>
                     </Box>
-                  </Box>
-                  <CardContent className="card__content">
-                    <Typography variant="h6" component="div">
-                      {e.product.name}
-                    </Typography>
-                    <Typography variant="body2">
-                      {e.product.originalPrice && (
-                        <span
-                          style={{
-                            textDecoration: "line-through",
-                            marginRight: 10,
-                          }}
-                        >
-                          ₹{e.product.originalPrice}
-                        </span>
-                      )}
-                      {e.product.discountedPrice && (
-                        <span>₹{e.product.discountedPrice}</span>
-                      )}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+                    <CardContent className="card__content">
+                      <Typography variant="h6" component="div">
+                        {e.product.name}
+                      </Typography>
+                      <Typography variant="body2">
+                        {e.product.originalPrice && (
+                          <span
+                            style={{
+                              textDecoration: "line-through",
+                              marginRight: 10,
+                            }}
+                          >
+                            ₹{e.product.originalPrice}
+                          </span>
+                        )}
+                        {e.product.discountedPrice && (
+                          <span>₹{e.product.discountedPrice}</span>
+                        )}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Link>
+
           {/* Phân trang */}
           <Box sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}>
             <Pagination
