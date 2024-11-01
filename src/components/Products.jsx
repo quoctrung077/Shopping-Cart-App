@@ -46,10 +46,12 @@ const ProductCatalog = () => {
     );
   };
 
+
+
   return (
     <>
       <Box sx={{ marginBottom: "41px" }}>
-        <img src="/images/Header-img.svg" alt="" />
+        <img style={{ width: "100%" }} src="/images/Header-img.svg" alt="" />
       </Box>
       <Box
         sx={{
@@ -145,91 +147,90 @@ const ProductCatalog = () => {
           </Box>
 
           {/* Lưới Sản Phẩm */}
-          <Link to="/product-detail/  ">
-            <Grid container spacing={2}>
-              {currentDataList.map((e) => (
-                <Grid
+
+          <Grid container spacing={2}>
+            {currentDataList.map((e) => (
+              <Grid
+                sx={{
+                  gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                }}
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                key={e.product.id}
+                component={Link}
+                to={`/product-detail/${e.product.id}`}
+              >
+                <Card
                   sx={{
-                    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                    position: "relative",
+                    overflow: "hidden",
+                    cursor: "pointer",
+                    "&:hover .image-box": {
+                      transform: "translateY(-10px)",
+                      transition: "transform 0.3s ease",
+                    },
                   }}
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  key={e.product.id}
-                  component={Link}
-                  to={`/product-detail/${e.product.id}`}
                 >
-                  <Card
-                    sx={{
-                      position: "relative",
-                      overflow: "hidden",
-                      cursor: "pointer",
-                      "&:hover .image-box": {
-                        transform: "translateY(-10px)",
-                        transition: "transform 0.3s ease",
-                      },
-                    }}
-                  >
-                    {e.product.isOnSale && (
-                      <Box
-                        sx={{
-                          position: "absolute",
-                          right: 0,
-                          backgroundColor: "#E2342D",
-                          color: "white",
-                          padding: "6px 36.68px",
-                        }}
-                      >
-                        {calculateDiscountPercentage(
-                          e.product.originalPrice,
-                          e.product.discountedPrice
-                        )}
-                        % OFF
-                      </Box>
-                    )}
-                    <Box className="card__container">
-                      <Box
-                        className="image-box"
-                        sx={{
-                          margin: "81px 0",
-                          maxWidth: "280px",
-                          maxHeight: "280px",
-                          transition: "transform 0.3s ease",
-                        }}
-                      >
-                        <CardMedia
-                          component="img"
-                          image={e.product.image}
-                          alt={e.product.name}
-                        />
-                      </Box>
+                  {e.product.isOnSale && (
+                    <Box
+                      sx={{
+                        position: "absolute",
+                        right: 0,
+                        backgroundColor: "#E2342D",
+                        color: "white",
+                        padding: "6px 36.68px",
+                      }}
+                    >
+                      {calculateDiscountPercentage(
+                        e.product.originalPrice,
+                        e.product.discountedPrice
+                      )}
+                      % OFF
                     </Box>
-                    <CardContent className="card__content">
-                      <Typography variant="h6" component="div">
-                        {e.product.name}
-                      </Typography>
-                      <Typography variant="body2">
-                        {e.product.originalPrice && (
-                          <span
-                            style={{
-                              textDecoration: "line-through",
-                              marginRight: 10,
-                            }}
-                          >
-                            ₹{e.product.originalPrice}
-                          </span>
-                        )}
-                        {e.product.discountedPrice && (
-                          <span>₹{e.product.discountedPrice}</span>
-                        )}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-          </Link>
+                  )}
+                  <Box className="card__container">
+                    <Box
+                      className="image-box"
+                      sx={{
+                        margin: "81px 0",
+                        maxWidth: "280px",
+                        maxHeight: "280px",
+                        transition: "transform 0.3s ease",
+                      }}
+                    >
+                      <CardMedia
+                        component="img"
+                        image={e.product.image}
+                        alt={e.product.name}
+                      />
+                    </Box>
+                  </Box>
+                  <CardContent className="card__content">
+                    <Typography variant="h6" component="div">
+                      {e.product.name}
+                    </Typography>
+                    <Typography variant="body2">
+                      {e.product.originalPrice && (
+                        <span
+                          style={{
+                            textDecoration: "line-through",
+                            marginRight: 10,
+                          }}
+                        >
+                          ₹{e.product.originalPrice}
+                        </span>
+                      )}
+                      {e.product.discountedPrice && (
+                        <span>₹{e.product.discountedPrice}</span>
+                      )}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
 
           {/* Phân trang */}
           <Box sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}>

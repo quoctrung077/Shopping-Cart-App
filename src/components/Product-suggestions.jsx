@@ -7,6 +7,7 @@ import {
   Card,
   CardMedia,
   CardContent,
+  Button,
 } from "@mui/material";
 import data from "../data/Data.json";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
@@ -30,8 +31,13 @@ function ProductCarousel() {
   };
 
   return (
-    <Box textAlign="center" sx={{ width: "100%", my: 4 }}>
-      <Typography variant="h6" fontWeight="bold">
+    <Box textAlign="center" sx={{ width: "100%" }}>
+      <Typography
+        sx={{ fontSize: "36px", lineHeight: "54px" }}
+        fontWeight="bold"
+        color="#231F20"
+        marginBottom="35px"
+      >
         YOU MAY ALSO LIKE
       </Typography>
       <Box
@@ -41,13 +47,37 @@ function ProductCarousel() {
           justifyContent: "center",
           mt: 2,
           width: "100%",
-          padding: "0 56px 0 98px",
+          padding: {
+            xs: "0 20px",
+            md: "0 81px",
+          },
         }}
       >
-        <IconButton onClick={handlePrev}>
-          <ArrowBackIosNewIcon />
-        </IconButton>
-        <Grid container spacing={2} sx={{ overflow: "hidden" }}>
+        <Button
+          onClick={handlePrev}
+          sx={{
+            minWidth: "64px",
+            height: "64px",
+            padding: 0,
+            borderRadius: "50%",
+            backgroundColor: "#fff",
+            boxShadow: "0px 0px 16px 0px #00000014",
+            position: "absolute",
+            zIndex: 1,
+            left: "50px",
+            "&:hover": {
+              backgroundColor: "#e0e0e0",
+            },
+          }}
+        >
+          <ArrowBackIosNewIcon sx={{ color: "#4A4B4D" }} fontSize="small" />
+        </Button>
+
+        <Grid
+          container
+          spacing={2}
+          sx={{ overflow: "hidden", position: "relative" }}
+        >
           {onSaleProducts.slice(currentIndex, currentIndex + 3).map((item) => (
             <Grid item xs={4} key={item.product.id}>
               <Card
@@ -59,20 +89,30 @@ function ProductCarousel() {
                   boxShadow: "none",
                 }}
               >
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={item.product.image}
-                  alt={item.product.name}
-                  sx={{
-                    borderRadius: 2,
-                    objectFit: "contain", // Giúp hình ảnh không bị méo
-                    width: "100%", // Đảm bảo ảnh chiếm đủ chiều rộng
-                    height: "auto", // Cho phép ảnh tự động căn chỉnh chiều cao
-                  }}
-                />
+                <Box className="image-container">
+                  <CardMedia
+                    component="img"
+                    image={item.product.image}
+                    alt={item.product.name}
+                    sx={{
+                      borderRadius: 2,
+                      objectFit: "contain",
+                      width: "100%",
+                      height: "auto",
+                      maxWidth: "320px",
+                    }}
+                  />
+                </Box>
                 <CardContent>
-                  <Typography variant="body2" fontWeight="bold">
+                  <Typography
+                    sx={{
+                      fontFamily: "poppins",
+                      color: "#1E1E20",
+                      lineHeight: "36px",
+                      fontSize: "24px",
+                      fontWeight: "500",
+                    }}
+                  >
                     {item.product.name}
                   </Typography>
                 </CardContent>
@@ -80,9 +120,24 @@ function ProductCarousel() {
             </Grid>
           ))}
         </Grid>
-        <IconButton onClick={handleNext}>
-          <ArrowForwardIosIcon />
-        </IconButton>
+        <Button
+          onClick={handleNext}
+          sx={{
+            minWidth: "64px",
+            height: "64px",
+            padding: 0,
+            borderRadius: "50%",
+            backgroundColor: "#fff",
+            boxShadow: "0px 0px 16px 0px #00000014",
+            position: "absolute",
+            right: "50px",
+            "&:hover": {
+              backgroundColor: "#e0e0e0",
+            },
+          }}
+        >
+          <ArrowForwardIosIcon sx={{ color: "#4A4B4D" }} fontSize="small" />
+        </Button>
       </Box>
     </Box>
   );

@@ -16,7 +16,7 @@
       "id": "2",
       "name": "iPhone 16",
       "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
-      "color": ["Black", "White", "Titan"],
+      "color": ["Black", "Titan"],
       "isOnSale": false,
       "originalPrice": 499.99,
       "discountedPrice": "",
