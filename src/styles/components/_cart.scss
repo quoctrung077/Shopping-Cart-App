@@ -1,0 +1,30 @@
+.cart-container {
+  padding: 0 101px;
+  margin-bottom: 105px;
+  @media (max-width: 1200px) {
+    padding: 0 80px 100px 80px;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 0 60px 80px 60px;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 40px 60px 40px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 0 20px 40px 20px;
+    margin-bottom: 20px;
+  }
+  .cart-item__container {
+    display: flex;
+    gap: 82px;
+    .cart-item__details {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

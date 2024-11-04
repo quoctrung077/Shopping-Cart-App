@@ -53,31 +53,39 @@ function ProductDetail() {
 
   const addToCart = (product) => {
     if (!selectedColor) {
-      alert("Please select color before adding to cart!");
-      return;
+      return alert("Please select a color before adding to the cart!");
     }
 
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    const productToAdd = {
-      id: product.id,
-      name: product.name,
-      quantity: 1,
-      color: selectedColor,
-      price: product.isOnSale ? product.discountedPrice : product.originalPrice,
-      image: product.image,
-    };
+    if (existingCart.length >= 5) {
+      return alert("You can only add a maximum of 5 products to the cart!");
+    }
 
-    const productExists = existingCart.find(
+    const uniqueKey = `${product.id}-${selectedColor}`;
+
+    const productExists = existingCart.some(
       (item) => item.id === product.id && item.color === selectedColor
     );
 
     if (productExists) {
-      alert("Product is already in the cart!");
+      alert("This product is already in the cart with the selected color!");
     } else {
+      const productToAdd = {
+        id: product.id,
+        uniqueKey,
+        name: product.name,
+        quantity: 1,
+        color: selectedColor,
+        price: product.isOnSale
+          ? product.discountedPrice
+          : product.originalPrice,
+        image: product.image,
+      };
+
       existingCart.push(productToAdd);
       localStorage.setItem("cart", JSON.stringify(existingCart));
-      alert("Product has been added to cart!");
+      alert("Product has been added to the cart!");
     }
   };
 
