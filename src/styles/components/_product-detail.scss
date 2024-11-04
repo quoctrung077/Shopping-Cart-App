@@ -1,0 +1,43 @@
+.product-detail {
+  margin: 0 101px 121px 101px;
+  @media (max-width: 1200px) {
+    margin: 0 80px 100px 80px;
+  }
+
+  @media (max-width: 992px) {
+    margin: 0 60px 80px 60px;
+  }
+  @media (max-width: 768px) {
+    margin: 0 40px 60px 40px;
+  }
+
+  @media (max-width: 576px) {
+    margin: 0 20px 40px 20px;
+  }
+}
+.MuiAccordionSummary-content {
+  justify-content: space-evenly;
+}
+
+.image-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+  min-height: 520px;
+  height: 100%;
+  @media (max-width: 1200px) {
+    min-height: 380px;
+  }
+
+  @media (max-width: 992px) {
+    min-height: 300px;
+  }
+  @media (max-width: 768px) {
+    min-height: 260px;
+  }
+
+  @media (max-width: 600px) {
+    min-height: 200px;
+  }
+}

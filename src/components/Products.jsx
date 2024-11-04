@@ -12,6 +12,7 @@ import {
   CardActions,
   Pagination,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import data from "../data/Data.json";
 
 const ProductCatalog = () => {
@@ -45,10 +46,12 @@ const ProductCatalog = () => {
     );
   };
 
+
+
   return (
     <>
       <Box sx={{ marginBottom: "41px" }}>
-        <img src="/images/Header-img.svg" alt="" />
+        <img style={{ width: "100%" }} src="/images/Header-img.svg" alt="" />
       </Box>
       <Box
         sx={{
@@ -144,6 +147,7 @@ const ProductCatalog = () => {
           </Box>
 
           {/* Lưới Sản Phẩm */}
+
           <Grid container spacing={2}>
             {currentDataList.map((e) => (
               <Grid
@@ -155,6 +159,8 @@ const ProductCatalog = () => {
                 sm={6}
                 md={4}
                 key={e.product.id}
+                component={Link}
+                to={`/product-detail/${e.product.id}`}
               >
                 <Card
                   sx={{
@@ -225,6 +231,7 @@ const ProductCatalog = () => {
               </Grid>
             ))}
           </Grid>
+
           {/* Phân trang */}
           <Box sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}>
             <Pagination
