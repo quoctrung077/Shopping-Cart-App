@@ -14,49 +14,49 @@
   {
     "product": {
       "id": "2",
-      "name": "iPhone 16",
-      "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
-      "color": ["Black", "Titan"],
+      "name": "Máy Giặt LG",
+      "description": "Máy giặt LG AI DD Inverter 10 kg FV1410S4W1 là kiểu máy giặt lồng ngang có đa dạng công nghệ phục vụ cho nhu cầu giặt hiệu quả, phải kể đến như công nghệ AI DD bảo vệ sợi vải, công nghệ giặt tiết kiệm TurboWash, điều khiển máy giặt từ xa qua ứng dụng LG ThinQ,...",
+      "color": ["Black", "Black"],
       "isOnSale": false,
-      "originalPrice": 499.99,
+      "originalPrice": 329.99,
       "discountedPrice": "",
-      "image": "/images/iphone-16-pro-max.png"
+      "image": "/images/may-giat-lg.png"
     }
   },
   {
     "product": {
       "id": "3",
-      "name": "iPhone 16",
-      "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
-      "color": ["Black", "White", "Titan"],
-      "isOnSale": false,
-      "originalPrice": 499.99,
-      "discountedPrice": 399.99,
-      "image": "/images/iphone-16-pro-max.png"
+      "name": "Tủ Lạnh LG",
+      "description": "Tủ lạnh Samsung Inverter 655 lít RS62R5001M9/SV có thiết kế kiểu tủ lạnh side by side đẳng cấp, đi cùng gam màu bạc sang trọng, thời thượng, tủ lạnh sẽ là điểm nhấn nổi bật, mang lại cho không gian nội thất của gia đình một vẻ đẹp hiện đại.",
+      "color": ["Black", "White"],
+      "isOnSale": true,
+      "originalPrice": 299.99,
+      "discountedPrice": 149.99,
+      "image": "/images/tu-lanh-aqua.png"
     }
   },
   {
     "product": {
       "id": "4",
-      "name": "iPhone 16",
-      "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
+      "name": "Tivi Samsung 4K",
+      "description": "Smart Tivi Samsung 4K Crystal UHD 70 inch UA70DU7000 tôn lên vẻ đẹp của không gian nội thất với thiết kế sang trọng, màn hình 70 inch với độ phân giải 4K mang lại những thước phim sống động và chân thực, bộ xử lý Crystal 4K tăng cường chất lượng hiển thị, tái tạo hình ảnh với độ chi tiết vượt trội.",
       "color": ["Black", "White", "Titan"],
       "isOnSale": false,
       "originalPrice": 499.99,
-      "discountedPrice": 399.99,
-      "image": "/images/iphone-16-pro-max.png"
+      "discountedPrice": "",
+      "image": "/images/smart-tivi-samsung-4k.png"
     }
   },
   {
     "product": {
       "id": "5",
-      "name": "iPhone 16",
-      "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
+      "name": "Robot Hút Bụi",
+      "description": "Thiết kế thông minh, robot tích hợp hộp chứa bụi 350 ml.Trạm sạc trang bị túi chứa bụi 2600 ml, hộp nước sạch 3500 ml và hộp nước bẩn 3000 ml. Công suất 60W, lực hút mạnh mẽ lên đến 10000 Pa giúp tối ưu hiệu quả hút bụi, làm sạch mọi bụi bẩn.",
       "color": ["Black", "White", "Titan"],
-      "isOnSale": false,
-      "originalPrice": 499.99,
-      "discountedPrice": 399.99,
-      "image": "/images/iphone-16-pro-max.png"
+      "isOnSale": true,
+      "originalPrice": 149.99,
+      "discountedPrice": 129.99,
+      "image": "/images/Robot-hut-bui-samsung.png"
     }
   },
   {
@@ -65,7 +65,7 @@
       "name": "iPhone 16",
       "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
       "color": ["Black", "White", "Titan"],
-      "isOnSale": false,
+      "isOnSale": true,
       "originalPrice": 499.99,
       "discountedPrice": 399.99,
       "image": "/images/iphone-16-pro-max.png"
@@ -74,49 +74,49 @@
   {
     "product": {
       "id": "7",
-      "name": "iPhone 16",
-      "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
-      "color": ["Black", "White", "Titan"],
+      "name": "Máy Giặt LG",
+      "description": "Máy giặt LG AI DD Inverter 10 kg FV1410S4W1 là kiểu máy giặt lồng ngang có đa dạng công nghệ phục vụ cho nhu cầu giặt hiệu quả, phải kể đến như công nghệ AI DD bảo vệ sợi vải, công nghệ giặt tiết kiệm TurboWash, điều khiển máy giặt từ xa qua ứng dụng LG ThinQ,...",
+      "color": ["Black", "Black"],
       "isOnSale": false,
-      "originalPrice": 499.99,
-      "discountedPrice": 399.99,
-      "image": "/images/iphone-16-pro-max.png"
+      "originalPrice": 329.99,
+      "discountedPrice": "",
+      "image": "/images/may-giat-lg.png"
     }
   },
   {
     "product": {
       "id": "8",
-      "name": "iPhone 16",
-      "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
-      "color": ["Black", "White", "Titan"],
+      "name": "Tủ Lạnh LG",
+      "description": "Tủ lạnh Samsung Inverter 655 lít RS62R5001M9/SV có thiết kế kiểu tủ lạnh side by side đẳng cấp, đi cùng gam màu bạc sang trọng, thời thượng, tủ lạnh sẽ là điểm nhấn nổi bật, mang lại cho không gian nội thất của gia đình một vẻ đẹp hiện đại.",
+      "color": ["Black", "White"],
       "isOnSale": true,
-      "originalPrice": 499.99,
-      "discountedPrice": 399.99,
-      "image": "/images/iphone-16-pro-max.png"
+      "originalPrice": 299.99,
+      "discountedPrice": 149.99,
+      "image": "/images/tu-lanh-aqua.png"
     }
   },
   {
     "product": {
       "id": "9",
-      "name": "iPhone 16",
-      "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
+      "name": "Tivi Samsung 4K",
+      "description": "Smart Tivi Samsung 4K Crystal UHD 70 inch UA70DU7000 tôn lên vẻ đẹp của không gian nội thất với thiết kế sang trọng, màn hình 70 inch với độ phân giải 4K mang lại những thước phim sống động và chân thực, bộ xử lý Crystal 4K tăng cường chất lượng hiển thị, tái tạo hình ảnh với độ chi tiết vượt trội.",
       "color": ["Black", "White", "Titan"],
-      "isOnSale": true,
+      "isOnSale": false,
       "originalPrice": 499.99,
-      "discountedPrice": 399.99,
-      "image": "/images/iphone-16-pro-max.png"
+      "discountedPrice": "",
+      "image": "/images/smart-tivi-samsung-4k.png"
     }
   },
   {
     "product": {
       "id": "10",
-      "name": "iPhone 16",
-      "description": "Chip Apple A18 Pro 6 nhân, RAM: 8 GB, Dung lượng: 256 GB, Camera sau: Chính 48 MP & Phụ 48 MP, 12 MP, Camera trước: 12 MP, Pin 33 giờ, Sạc 20 W",
+      "name": "Robot Hút Bụi",
+      "description": "Thiết kế thông minh, robot tích hợp hộp chứa bụi 350 ml.Trạm sạc trang bị túi chứa bụi 2600 ml, hộp nước sạch 3500 ml và hộp nước bẩn 3000 ml. Công suất 60W, lực hút mạnh mẽ lên đến 10000 Pa giúp tối ưu hiệu quả hút bụi, làm sạch mọi bụi bẩn.",
       "color": ["Black", "White", "Titan"],
       "isOnSale": true,
-      "originalPrice": 499.99,
-      "discountedPrice": 399.99,
-      "image": "/images/smart-tivi-samsung-4k.png"
+      "originalPrice": 149.99,
+      "discountedPrice": 129.99,
+      "image": "/images/Robot-hut-bui-samsung.png"
     }
   }
 ]

@@ -55,14 +55,20 @@ const Header = () => {
             <CustomTypography>ABOUT US</CustomTypography>
           </Link>
         </Box>
-        <Box sx={{ display: "flex", gap: "clamp(10px, 2vw, 38px)" }}>
-          <Link to="/profile">
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "clamp(10px, 2vw, 38px)",
+          }}
+        >
+          <Link to="/profile" className="icon-item">
             <img src="/icons/profile-icon.svg" alt="User" />
           </Link>
-          <Link to="/notifications">
+          <Link to="/notifications" className="icon-item">
             <img src="/icons/notification-icon.svg" alt="Notification" />
           </Link>
-          <Link to="/cart">
+          <Link to="/cart" className="icon-item">
             <img src="/icons/shopping-icon.svg" alt="Cart" />
           </Link>
         </Box>

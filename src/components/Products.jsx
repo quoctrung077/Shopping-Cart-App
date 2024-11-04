@@ -46,8 +46,6 @@ const ProductCatalog = () => {
     );
   };
 
-
-
   return (
     <>
       <Box sx={{ marginBottom: "41px" }}>
@@ -195,7 +193,6 @@ const ProductCatalog = () => {
                       className="image-box"
                       sx={{
                         margin: "81px 0",
-                        maxWidth: "280px",
                         maxHeight: "280px",
                         transition: "transform 0.3s ease",
                       }}
@@ -204,6 +201,7 @@ const ProductCatalog = () => {
                         component="img"
                         image={e.product.image}
                         alt={e.product.name}
+                        height="280px"
                       />
                     </Box>
                   </Box>
