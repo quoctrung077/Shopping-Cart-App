@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Container,
@@ -9,12 +8,12 @@ import {
   Grid,
 } from "@mui/material";
 
-const CustomTypography = styled(Typography)(({ theme }) => ({
+const CustomTypography = styled(Typography)({
   fontFamily: "'Montserrat', sans-serif",
   color: "#222222",
   fontSize: "18px",
   fontWeight: 400,
-}));
+});
 
 const CustomContainer = styled(Container)(({ theme }) => ({
   padding: theme.spacing(1),
@@ -30,7 +29,11 @@ const Footer = () => {
       }}
     >
       <CustomContainer maxWidth={false}>
-        <Grid container spacing={3} sx={{display: "flex", justifyContent: "space-between"}}>
+        <Grid
+          container
+          spacing={3}
+          sx={{ display: "flex", justifyContent: "space-between" }}
+        >
           <Grid item xs={12} md={3}>
             <Box className="logo">
               <img src="/images/Macc-esentials-footer-logo.svg" alt="" />

@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import {
   Box,
   Grid,
   Typography,
-  Button,
   Select,
   MenuItem,
   Card,
   CardMedia,
   CardContent,
-  CardActions,
   Pagination,
 } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -74,10 +72,11 @@ const ProductCatalog = () => {
               src="/icons/arrow-down-img.svg"
               alt="arrow"
               sx={{
-                width: "6.5px",
+                width: "7px",
                 height: "12px",
                 marginRight: "3.77px",
                 marginTop: "5px",
+                objectFit: "contain",
                 transform: openFilter.company
                   ? "rotate(180deg)"
                   : "rotate(0deg)",
@@ -98,6 +97,7 @@ const ProductCatalog = () => {
                 width: "6.5px",
                 height: "12px",
                 marginRight: "3.77px",
+                objectFit: "contain",
                 marginTop: "5px",
                 transform: openFilter.price ? "rotate(180deg)" : "rotate(0deg)",
                 transition: "transform 0.3s ease",
@@ -117,6 +117,7 @@ const ProductCatalog = () => {
                 width: "6.5px",
                 height: "12px",
                 marginRight: "3.77px",
+                objectFit: "contain",
                 marginTop: "5px",
                 transform: openFilter.categories
                   ? "rotate(180deg)"

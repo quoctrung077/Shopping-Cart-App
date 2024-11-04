@@ -1,16 +1,15 @@
-import React from "react";
 import { AppBar, Toolbar, Typography, Box, styled } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Badge from "@mui/material/Badge";
 import { Link } from "react-router-dom";
 
-const CustomTypography = styled(Typography)(({ theme }) => ({
+const CustomTypography = styled(Typography)({
   fontFamily: "'Montserrat', sans-serif",
   fontWeight: 400,
   fontSize: "16px",
   lineHeight: "19.5px",
   color: "#222222",
-}));
+});
 
 const CustomToolbar = styled(Toolbar)(({ theme }) => ({
   padding: theme.spacing(1),
