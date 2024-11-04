@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Breadcrumbs,
   Typography,
@@ -18,13 +17,13 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Data from "../data/Data.json";
 
-const CustomBreadcrumbText = styled(Typography)(({ theme }) => ({
+const CustomBreadcrumbText = styled(Typography)({
   color: "#222222",
   fontSize: "14px",
   fontWeight: "300",
   lineHeight: "17.07px",
   fontFamily: "'Montserrat', sans-serif",
-}));
+});
 
 const CustomButtonColor = styled(Button)(() => ({
   color: "#222222",
@@ -36,20 +35,19 @@ const CustomButtonColor = styled(Button)(() => ({
   padding: "11px 13px",
 }));
 
-const CustomTypography = styled(Typography)(({ theme }) => ({
+const CustomTypography = styled(Typography)({
   fontWeight: "400",
   fontFamily: "'Montserrat', sans-serif",
-}));
+});
 
 function ProductDetail() {
+  const [selectedColor, setSelectedColor] = useState("");
   const { productId } = useParams();
   const product = Data.find((item) => item.product.id === productId)?.product;
 
   if (!product) {
     return <Typography variant="h5">Product not found</Typography>;
   }
-
-  const [selectedColor, setSelectedColor] = useState("");
 
   const addToCart = (product) => {
     if (!selectedColor) {
@@ -122,7 +120,13 @@ function ProductDetail() {
                 component="img"
                 src={product.image}
                 alt={product.name}
-                sx={{ padding: "32px", maxWidth: "450px" }}
+                sx={{
+                  padding: "32px",
+                  maxWidth: "450px",
+                  "@media (max-width: 600px)": {
+                    maxWidth: "100%",
+                  },
+                }}
               />
             </Box>
           </Grid>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Card,
   CardMedia,
@@ -42,13 +42,13 @@ const theme = createTheme({
   },
 });
 
-const CustomBreadcrumbText = styled(Typography)(({ theme }) => ({
+const CustomBreadcrumbText = styled(Typography)({
   color: "#222222",
   fontSize: "14px",
   fontWeight: "300",
   lineHeight: "17.07px",
   fontFamily: "'Montserrat', sans-serif",
-}));
+});
 
 const CustomIconButton = styled(IconButton)({
   padding: "0",
@@ -65,9 +65,18 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const [alertMessage, setAlertMessage] = useState("");
 
-  useEffect(() => {
+  const updateCartItemsFromStorage = () => {
     const storedItems = JSON.parse(localStorage.getItem("cart")) || [];
     setCartItems(storedItems);
+  };
+
+  useEffect(() => {
+    updateCartItemsFromStorage();
+    window.addEventListener("storage", updateCartItemsFromStorage);
+    return () => {
+      // xoá component unmount
+      window.removeEventListener("storage", updateCartItemsFromStorage);
+    };
   }, []);
 
   const handleDelete = (uniqueKey) => {
@@ -96,6 +105,7 @@ const Cart = () => {
       }
       return item;
     });
+
     setCartItems(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };

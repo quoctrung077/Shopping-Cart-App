@@ -2,7 +2,6 @@ import React from "react";
 import {
   Box,
   Typography,
-  IconButton,
   Grid,
   Card,
   CardMedia,
@@ -18,6 +17,10 @@ function ProductCarousel() {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
   const onSaleProducts = data.filter((item) => item.product.isOnSale);
+
+  if (onSaleProducts.length === 0) {
+    return null;
+  }
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
