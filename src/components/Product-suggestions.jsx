@@ -9,6 +9,7 @@ import {
   CardContent,
   Button,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import data from "../data/Data.json";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -31,12 +32,13 @@ function ProductCarousel() {
   };
 
   return (
-    <Box textAlign="center" sx={{ width: "100%" }}>
+    <Box textAlign="center" sx={{ width: "100%", marginBottom: "66px" }}>
       <Typography
         sx={{ fontSize: "36px", lineHeight: "54px" }}
-        fontWeight="bold"
+        fontWeight="700"
         color="#231F20"
         marginBottom="35px"
+        fontFamily={"'Poppins', sans-serif"}
       >
         YOU MAY ALSO LIKE
       </Typography>
@@ -56,15 +58,15 @@ function ProductCarousel() {
         <Button
           onClick={handlePrev}
           sx={{
-            minWidth: "64px",
-            height: "64px",
+            minWidth: { xs: "30px", sm: "64px" },
+            height: { xs: "30px", sm: "64px" },
             padding: 0,
             borderRadius: "50%",
             backgroundColor: "#fff",
             boxShadow: "0px 0px 16px 0px #00000014",
             position: "absolute",
             zIndex: 1,
-            left: "50px",
+            left: { xs: "5px", sm: "50px" },
             "&:hover": {
               backgroundColor: "#e0e0e0",
             },
@@ -79,7 +81,13 @@ function ProductCarousel() {
           sx={{ overflow: "hidden", position: "relative" }}
         >
           {onSaleProducts.slice(currentIndex, currentIndex + 3).map((item) => (
-            <Grid item xs={4} key={item.product.id}>
+            <Grid
+              item
+              xs={4}
+              key={item.product.id}
+              component={Link}
+              to={`/product-detail/${item.product.id}`}
+            >
               <Card
                 sx={{
                   display: "flex",
@@ -103,13 +111,19 @@ function ProductCarousel() {
                     }}
                   />
                 </Box>
-                <CardContent>
+                <CardContent
+                  sx={{
+                    "@media (max-width: 600px)": {
+                      padding: "0",
+                    },
+                  }}
+                >
                   <Typography
                     sx={{
                       fontFamily: "poppins",
                       color: "#1E1E20",
                       lineHeight: "36px",
-                      fontSize: "24px",
+                      fontSize: { xs: "18px", sm: "24px" },
                       fontWeight: "500",
                     }}
                   >
@@ -123,14 +137,14 @@ function ProductCarousel() {
         <Button
           onClick={handleNext}
           sx={{
-            minWidth: "64px",
-            height: "64px",
+            minWidth: { xs: "30px", sm: "64px" },
+            height: { xs: "30px", sm: "64px" },
             padding: 0,
             borderRadius: "50%",
             backgroundColor: "#fff",
             boxShadow: "0px 0px 16px 0px #00000014",
             position: "absolute",
-            right: "50px",
+            right: { xs: "5px", sm: "50px" },
             "&:hover": {
               backgroundColor: "#e0e0e0",
             },

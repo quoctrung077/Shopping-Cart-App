@@ -21,7 +21,9 @@
   }
   .cart-item__container {
     display: flex;
-    gap: 82px;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
     .cart-item__details {
       display: flex;
       align-items: center;
