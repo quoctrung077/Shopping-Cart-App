@@ -57,6 +57,10 @@ const ProductCatalog = () => {
           display: "flex",
           padding: "0 50px",
           gap: "55px",
+          "@media (max-width: 600px)": {
+            padding: "0 10px",
+            gap: "20px",
+          },
         }}
       >
         <Box className="sidebar">
@@ -136,7 +140,11 @@ const ProductCatalog = () => {
             <Typography variant="h6">40 Products</Typography>
             <Select
               defaultValue="Sort"
-              sx={{ width: "clamp(100px, 20vw, 241px)" }}
+              sx={{
+                width: "clamp(100px, 20vw, 241px)",
+                fontSize: "18px, font-weight: 400",
+                fontFamily: "Montserrat",
+              }}
             >
               <MenuItem value="Sort">Sort</MenuItem>
               <MenuItem value="priceLowToHigh">Price: priceLowToHigh</MenuItem>
@@ -202,18 +210,42 @@ const ProductCatalog = () => {
                         image={e.product.image}
                         alt={e.product.name}
                         height="280px"
+                        sx={{
+                          "@media (max-width: 600px)": {
+                            height: "100px",
+                          },
+                        }}
                       />
                     </Box>
                   </Box>
                   <CardContent className="card__content">
-                    <Typography variant="h6" component="div">
+                    <Typography
+                      sx={{
+                        fontSize: "24px",
+                        fontFamily: "Poppins",
+                        fontWeight: 500,
+                        lineHeight: "24px",
+                        color: "#1E1E20",
+                      }}
+                      component="div"
+                    >
                       {e.product.name}
                     </Typography>
-                    <Typography variant="body2">
+                    <Typography
+                      sx={{
+                        fontSize: "16px",
+                        fontFamily: "Poppins",
+                        fontWeight: 400,
+                        color: "#1E1E20",
+                        lineHeight: "24px",
+                      }}
+                    >
                       {e.product.originalPrice && (
                         <span
                           style={{
-                            textDecoration: "line-through",
+                            textDecoration: e.product.discountedPrice
+                              ? "line-through"
+                              : "none",
                             marginRight: 10,
                           }}
                         >

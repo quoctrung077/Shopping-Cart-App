@@ -1,6 +1,7 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Box, styled } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import Badge from "@mui/material/Badge";
 import { Link } from "react-router-dom";
 
 const CustomTypography = styled(Typography)(({ theme }) => ({
@@ -45,9 +46,12 @@ const Header = () => {
           <Link to="/essentials" className="item">
             <CustomTypography>ESSENTIALS</CustomTypography>
           </Link>
-          <Box className="logo">
-            <img src="/images/Macc-essentials-logo.svg" alt="" />
-          </Box>
+          <Link to="/">
+            <Box className="logo">
+              <img src="/images/Macc-essentials-logo.svg" alt="" />
+            </Box>
+          </Link>
+
           <Link to="/best-sellers" className="item">
             <CustomTypography>BEST SELLERS</CustomTypography>
           </Link>
@@ -63,13 +67,40 @@ const Header = () => {
           }}
         >
           <Link to="/profile" className="icon-item">
-            <img src="/icons/profile-icon.svg" alt="User" />
+            <Badge
+              sx={{
+                "& .MuiBadge-dot": {
+                  backgroundColor: "#E2342D",
+                },
+              }}
+              variant="dot"
+            >
+              <img src="/icons/profile-icon.svg" alt="User" />
+            </Badge>
           </Link>
           <Link to="/notifications" className="icon-item">
-            <img src="/icons/notification-icon.svg" alt="Notification" />
+            <Badge
+              sx={{
+                "& .MuiBadge-dot": {
+                  backgroundColor: "#E2342D",
+                },
+              }}
+              variant="dot"
+            >
+              <img src="/icons/notification-icon.svg" alt="Notification" />
+            </Badge>
           </Link>
           <Link to="/cart" className="icon-item">
-            <img src="/icons/shopping-icon.svg" alt="Cart" />
+            <Badge
+              sx={{
+                "& .MuiBadge-dot": {
+                  backgroundColor: "#E2342D",
+                },
+              }}
+              variant="dot"
+            >
+              <img src="/icons/shopping-icon.svg" alt="Cart" />
+            </Badge>
           </Link>
         </Box>
       </CustomToolbar>

@@ -8,15 +8,13 @@ import {
   Breadcrumbs,
   Stack,
   Box,
+  Snackbar,
+  Alert,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import { createTheme } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
-import DeleteIcon from "@mui/icons-material/Delete";
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { Transform } from "@mui/icons-material";
 
 const theme = createTheme({
   typography: {
@@ -65,6 +63,7 @@ const CustomIconButton = styled(IconButton)({
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [alertMessage, setAlertMessage] = useState("");
 
   useEffect(() => {
     const storedItems = JSON.parse(localStorage.getItem("cart")) || [];
@@ -83,12 +82,26 @@ const Cart = () => {
     const updatedCart = cartItems.map((item) => {
       if (item.uniqueKey === uniqueKey) {
         const newQuantity = item.quantity + delta;
-        return { ...item, quantity: Math.max(newQuantity, 1) };
+
+        if (newQuantity > 5) {
+          setAlertMessage("Shopping cart cannot exceed 5 products.");
+          return item;
+        }
+        if (newQuantity < 1) {
+          setAlertMessage("The number of products cannot be less than 1.");
+          return item;
+        }
+
+        return { ...item, quantity: newQuantity };
       }
       return item;
     });
     setCartItems(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
+  };
+
+  const handleCloseAlert = () => {
+    setAlertMessage("");
   };
 
   return (
@@ -107,7 +120,6 @@ const Cart = () => {
         <CustomBreadcrumbText>Cart</CustomBreadcrumbText>
       </Breadcrumbs>
       <ThemeProvider theme={theme}>
-        {" "}
         <Typography variant="h2" sx={{ marginBottom: "19px" }} gutterBottom>
           Shopping Cart
         </Typography>
@@ -146,6 +158,7 @@ const Cart = () => {
                     justifyContent: "center",
                     alignItems: "center",
                     gap: "6px",
+                    marginRight: "20px",
                   }}
                 >
                   <Typography variant="h1">{item.quantity}</Typography>
@@ -163,13 +176,12 @@ const Cart = () => {
                         alt="Increase Quantity"
                       />
                     </CustomIconButton>
-
                     <CustomIconButton
                       onClick={() => handleQuantityChange(item.uniqueKey, -1)}
                     >
                       <img
                         src="/icons/icon-arrow-down.svg"
-                        alt="Increase Quantity"
+                        alt="Decrease Quantity"
                       />
                     </CustomIconButton>
                   </Stack>
@@ -187,6 +199,20 @@ const Cart = () => {
             </Card>
           ))}
         </Stack>
+        <Snackbar
+          open={!!alertMessage}
+          autoHideDuration={3000}
+          onClose={handleCloseAlert}
+          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+        >
+          <Alert
+            onClose={handleCloseAlert}
+            severity="warning"
+            sx={{ width: "100%" }}
+          >
+            {alertMessage}
+          </Alert>
+        </Snackbar>
       </ThemeProvider>
     </Box>
   );
